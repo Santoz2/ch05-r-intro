@@ -3,20 +3,35 @@
 ## the game is called 'is it going to rain in Seattle?'
 
 ## make a variable called 'chance_of_rain' and assign it to be 0
-
+chance_of_rain <- 0
 ## assign 'true' or 'false' to a variable named 'I_saw_raindrops'
-
+I_saw_raindrops <- TRUE
 ## assign 'true' or 'false' to a variable named 'my_shoes_are_wet'
-
+my_shoes_are_wet <- FALSE
 ## assign 'true' or 'false' to a variable named 'my_ta_is_soaked'
-
+my_ta_is_soaked <- FALSE
 ## assign 'true' or 'false' to a variable named 'I_love_cookies'
-
+I_love_cookies <- TRUE
 ## ok, now you have your variables ready to go.
 
 ## make an if statement that checks whether you saw raindrops
 ## if you did, set chance_of_rain to 100
+if (I_saw_raindrops) {
+  chance_of_rain <- 100
+} else if (my_shoes_are_wet) {
+  
+    chance_of_rain <- chance_of_rain + 40
 
+} else {
+  if (my_ta_is_soaked) {
+    chance_of_rain <- chance_of_rain + 50
+  }
+}
+
+if (!I_love_cookies) {
+  reason <- "there are better deserts"
+}
+cat(c("The chance of rain in Seattle is " , chance_of_rain , " percent"))
 ## else make an if statement that checks whether your shoes are wet
 ## if they are, chance of rain goes up by 40 percent
 
@@ -31,3 +46,5 @@
 
 ## bonus:
 ## how to make write this exercise in a function??
+
+cat("This can be made into a function by placing rainPercent <- function(variables) {} around the existing code")
